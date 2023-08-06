@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8/">
+        <meta name="viewport" content="width=device-width initial-scale=1"/>
+        <meta name="keyword" content="science, bio, kid, simple, website"/>
+        <meta name="author" content="Nhu Le">
+        <title>Biology for everyone</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <div class="topnav">
+        <a href="home.html">Home</a>
+        <a href="assessment.html">Assessment</a>
+        <a class="active" href="setting.html">Setting</a>
+        <!-- <a href="#about">About</a> -->
+      </div>
+    <body>
+        <div id="adminVerification" class="unhidden">
+            <h2> Please enter admin password to continue: </h2>
+            <input type="text" id="adminPassword" placeholder="admin - by default"> 
+            <button id="showSetting">Submit</button>
+        </div>    
+        <div id="questionSetting" class="hidden">
+            <h1></h1>
+            <h2> Question Table </h2>
+                <button id="showButton">Show question list </button>
+                <h4></h4>
+                <table id="questionTable" class="table table-border table-striped table-earning"> </table>
+            <h2> Add a strand of DNA </h2>
+            <input type="text" id="newStrand" placeholder="Please enter a strand here" />
+            <button id="addButton">Submit </button>
+            <h2> Remove a strand </h2>
+            <input type="text" id="deleteQuestionId" placeholder="Please enter question id here" />
+            <button id="deleteButton">Submit </button>
+            <h2> Update a strand </h2>
+            <input type="text" id="updateQuestionId" placeholder="Enter Id here" />
+            <input type="text" id="updateStrand" placeholder="Enter new strand here" />
+            <button id="updateButton">Submit </button>
+        </div>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="setting.js"></script>
+    </body>
+</html>

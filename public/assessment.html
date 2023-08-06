@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8/">
+        <meta name="viewport" content="width=device-width initial-scale=1"/>
+        <meta name="keyword" content="science, bio, kid, simple, website"/>
+        <meta name="author" content="Nhu Le">
+        <title>Biology for everyone</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <div class="topnav">
+        <a href="home.html">Home</a>
+        <a class="active" href="assessment.html">Assessment</a>
+        <a href="setting.html">Setting</a>
+        <!-- <a href="#about">About</a> -->
+      </div>
+    <body>
+        <div id="initialSection" class="unhidden">
+            <h2> Please enter your name before taking the test</h2>
+            <input type="text" id="userName" placeholder="Enter your name here"> 
+            <h2> Are you ready ?</h2>
+            <button id="startTesting">Start the test</button>
+        </div>    
+        <div id="questionSection" class="hidden">
+            <h1> Test </h1>
+            <h2> Question List </h2>
+            <table id="questionList" class="table table-border table-striped table-earning"> </table>
+            <button id="finishTesting">Click to submit your work</button>
+        </div>
+        <div id="scoreSection" class="hidden">
+            <h1> Result </h1>
+            <h2> Question Rubric </h2>
+            <table id="answerList" class="table table-border table-striped table-earning"> </table>
+            <button id="againTesting">Try again ?</button>
+        </div>
+        <hr class="solid">
+        <div id='scoreBoard'>
+            <table id="scoreList" class="table table-border table-striped table-earning"> </table>
+        </div>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="assessment.js"></script>
+    </body>
+</html>
