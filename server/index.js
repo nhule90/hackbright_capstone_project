@@ -17,5 +17,8 @@ app.get('/api/questionids', getQuestionIds)
 app.post('/api/questions', createQuestion)
 app.put('/api/questions/:id', updateQuestion)
 app.delete('/api/questions/:id', deleteQuestion)
-
+app.use(express.static(`${__dirname}/public`));
+app.get('/',(req,res) => {
+  res.sendFile(path.join(__dirname,'../public/home.html'))
+})
 app.listen(SERVER_PORT, () => console.log(`up on ${SERVER_PORT}`))
