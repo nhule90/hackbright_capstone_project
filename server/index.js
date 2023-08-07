@@ -22,4 +22,10 @@ app.use(express.static(`${__dirname}/public`));
 app.get('/',(req,res) => {
   res.sendFile(path.join(__dirname,'../public/home.html'))
 })
+app.get('/setting',(req,res) => {
+  res.sendFile(path.join(__dirname,'../public/setting.html'))
+})
+app.get('/assessment',(req,res) => {
+  res.sendFile(path.join(__dirname,'../public/assessment.html'))
+})
 app.listen(SERVER_PORT, () => console.log(`up on ${SERVER_PORT}`))
