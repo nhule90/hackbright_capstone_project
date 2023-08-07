@@ -1,0 +1,19 @@
+{
+  "name": "capstone_project",
+  "version": "1.0.0",
+  "description": "\"# hackbright_capstone_project\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhule90/hackbright_capstone_project.git"
+  },
+  "author": "nhu_le",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nhule90/hackbright_capstone_project/issues"
+  },
+  "homepage": "https://github.com/nhule90/hackbright_capstone_project#readme"
+}
