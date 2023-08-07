@@ -22,6 +22,9 @@ app.use(express.static(`${__dirname}/public`));
 app.get('/',(req,res) => {
   res.sendFile(path.join(__dirname,'../public/home.html'))
 })
+app.get('/home',(req,res) => {
+  res.sendFile(path.join(__dirname,'../public/home.html'))
+})
 app.get('/setting',(req,res) => {
   res.sendFile(path.join(__dirname,'../public/setting.html'))
 })
