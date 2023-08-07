@@ -31,4 +31,7 @@ app.get('/setting',(req,res) => {
 app.get('/assessment',(req,res) => {
   res.sendFile(path.join(__dirname,'../public/assessment.html'))
 })
+app.get('/style.css',(req,res) => {
+  res.sendFile(path.join(__dirname,'../public/style.css'))
+})
 app.listen(SERVER_PORT, () => console.log(`up on ${SERVER_PORT}`))
