@@ -1,13 +1,13 @@
 {
-  "name": "capstone_project",
+  "name": "capstone-project",
   "version": "1.0.0",
-  "description": "\"# hackbright_capstone_project\"",
-  "main": "index.js",
+  "description": "",
+  "main": "server.js",
   "scripts": {
     "test": "jest",
     "start": "npm-run-all -p nodemon browser-sync",
     "nodemon": "nodemon server.js",
-    "browser-sync": "browser-sync start --proxy localhost:8000 --files=**/*  --ignore=node_modules --reload-delay 10000 --no-ui"
+    "browser-sync": "browser-sync start --proxy localhost:4004 --files=**/*  --ignore=node_modules --reload-delay 10000 --no-ui --port 4004"
   },
   "repository": {
     "type": "git",
@@ -17,15 +17,19 @@
   "license": "ISC",
   "dependencies": {
     "browser-sync": "^2.28.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "jest": "^29.5.0",
     "nodemon": "^2.0.21",
     "npm-run-all": "^4.1.5",
     "rollbar": "^2.26.2",
-    "selenium-webdriver": "^4.8.1"
+    "selenium-webdriver": "^4.8.1",
+    "sequelize": "^6.32.1"
   },
   "bugs": {
     "url": "https://github.com/nhule90/hackbright_capstone_project/issues"
   },
   "homepage": "https://github.com/nhule90/hackbright_capstone_project#readme"
+
 }
