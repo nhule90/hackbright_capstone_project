@@ -30,10 +30,9 @@ function calculateHydrogenBonds(str){
 const showTestBtn = document.getElementById("startTesting")
 const divInitial = document.getElementById("initialSection")
 const divTest = document.getElementById("questionSection")
-var userName = document.getElementById("userName").value
 const showTest = () => {
     divTest.className='unhidden'
-    divInitial.className='hidden'
+    // divInitial.className='hidden'
     axios.get("http://localhost:4004/api/questions/")
         .then(res => {
             createListQuestions(res.data)
@@ -90,7 +89,7 @@ const divScore = document.getElementById("scoreSection")
 
 const showResult = () => {
     divTest.className='unhidden'
-    divInitial.className='hidden'
+    // divInitial.className='hidden'
     showScoreBtn.className='hidden'
     axios.get("http://localhost:4004/api/questions/")
         .then(res => {
@@ -104,6 +103,8 @@ const showResult = () => {
         ;
     }
 const answerList = document.getElementById("answerList");
+const userName = document.getElementById("userName");
+console.log(userName)
 function createListAnswers(data) {
     // Prepare header
     var answerHeader = document.createElement('thead')
@@ -156,7 +157,7 @@ function createListAnswers(data) {
     }
     ;
     var scoreCard = document.createElement('h3')
-    scoreCard.innerHTML = `Your score is ${totalScore}`
+    scoreCard.innerHTML = `${userName.value}'s score is ${totalScore}`
     answerList.appendChild(answerHeader)
     answerList.appendChild(answerBody)
     answerList.appendChild(scoreCard)
