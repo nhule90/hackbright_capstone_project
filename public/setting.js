@@ -53,6 +53,7 @@ const showQuestion = () => {
         .catch(err => {
             console.log(err)
             alert('Uh oh. Your request did not work.')
+            alert(res.data)
             })
         ;
 };
