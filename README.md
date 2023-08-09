@@ -23,3 +23,5 @@ I constructed 3 views:
 3. **Setting** is where admin can view the rubric or manipulate the question database. 
 
 ## Snapshot of my page
+
+![Alt text]('Screenshot_1.png')
