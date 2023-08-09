@@ -24,4 +24,4 @@ I constructed 3 views:
 
 ## Snapshot of my page
 
-![Alt text]('Screenshot_1.png')
+![Alt text](Screenshot_1.png "View1")
