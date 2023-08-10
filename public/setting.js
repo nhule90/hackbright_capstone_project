@@ -122,16 +122,21 @@ addBtn.addEventListener('click', addQuestion)
 const deleteBtn = document.getElementById("deleteButton")
 const deleteQuestion = () => {
     var id = document.getElementById('deleteQuestionId').value
-    axios.delete(`http://localhost:4004/api/questions/${id}`)
-    .then(res => {
-        showQuestion()
-        alert('Deleting Completed!')
-        })
-    .catch(err => {
-        console.log(err)
-        alert(err.response.data)
-        })
-    ;
+    if (confirm(`Are you sure you want to delete the strand id ${id}?`)) {
+        axios.delete(`http://localhost:4004/api/questions/${id}`)
+        .then(res => {
+            showQuestion()
+            alert('Deleting Completed!')
+            })
+        .catch(err => {
+            console.log(err)
+            alert(err.response.data)
+            })
+        ;
+      } else {
+        console.log('User cancelled the deletion');
+      }
+    
 };
 deleteBtn.addEventListener('click', deleteQuestion)
   
